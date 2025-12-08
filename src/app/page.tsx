@@ -36,7 +36,7 @@ export default function Home() {
 					</div>
 
 					<h1 className="text-2xl font-normal tracking-wide">
-						Hi, I'm Utsav Dhimmar.
+						Hi, I&#39;m Utsav Dhimmar.
 					</h1>
 
 					<p className="text-neutral-400 leading-relaxed max-w-lg">
