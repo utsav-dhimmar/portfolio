@@ -1,3 +1,10 @@
+export const INFO = {
+	name: "Utsav Dhimmar",
+	GITHUB_PROFILE_URL: "https://avatars.githubusercontent.com/u/136555325?v=4",
+	RESUME_LINK:
+		"https://drive.google.com/file/d/1E1_XU7R78KIcRyrNha5W1y4pjTfu_86u/view",
+};
+
 export const SKILLS = [
 	"JavaScript",
 	"TypeScript",
@@ -7,10 +14,13 @@ export const SKILLS = [
 	"Express.js",
 	"MongoDB",
 	"PostgreSQL",
+	"Docker",
+	"Redis",
 	// "CSS",
 	// "Software Design",
 	// "UI/UX Design",
 ];
+
 export const LINKS = [
 	{
 		title: "Linkdin",
