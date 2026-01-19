@@ -46,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${splineSansMono.variable} bg-black font-mono`}>
+    <html lang="en" data-theme="dark">
+      <body className={`${splineSansMono.variable} font-mono`}>
         <Navbar />
         {children}
       </body>
