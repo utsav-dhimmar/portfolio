@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { INFO, SKILLS } from '../constants';
+import {Image} from "astro:assets";
+---
+
+<Layout>
+  <main class="flex flex-col items-center justify-center p-8 font-mono text-white">
+    {/* Navigation */}
+
+    <div class="flex w-full max-w-2xl flex-col gap-8">
+      {/* Profile Info */}
+      <div class="space-y-4">
+        <div class="mb-6 h-16 w-16 overflow-hidden rounded-full border border-neutral-800">
+          <Image
+            src={INFO.GITHUB_PROFILE_URL}
+            alt={INFO.name}
+            width="64"
+            height="64"
+            class="h-full w-full object-cover"
+            title="Image from GitHub"
+            loading="eager"
+          />
+        </div>
+
+        <h1 class="text-2xl font-normal tracking-wide">
+          Hi, I'm {INFO.name}.
+        </h1>
+
+        <p class="max-w-lg leading-relaxed text-neutral-400">
+          Full Stack Developer ⚡.
+        </p>
+      </div>
+
+      {/* Skills Section */}
+      <div class="space-y-3">
+        <h2 class="text-md font-medium text-white">Top Skills</h2>
+        <div class="flex flex-wrap items-center gap-x-2 text-sm text-neutral-500">
+          {SKILLS.map((skill, index) => (
+            <span class="flex items-center">
+              {skill}
+              {index !== SKILLS.length - 1 && (
+                <span class="mx-1 ml-2 text-neutral-700">
+                  •{/*<Dot />*/}
+                </span>
+              )}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Button */}
+      <div class="pt-4">
+        <button class="mr-4 cursor-pointer rounded-full bg-white px-8 py-2.5 text-sm font-medium text-black transition-colors hover:bg-neutral-200">
+          <a
+            href="https://twitter.com/intent/tweet?text=Hello%20@utsav_dhimmar"
+            target="_blank"
+          >
+            Say Hello
+          </a>
+        </button>
+        <button class="mr-4 cursor-pointer rounded-full border border-white px-8 py-2.5 text-sm font-medium text-white transition-all hover:border-none hover:bg-white hover:text-black">
+          <a href={INFO.RESUME_LINK} target="_blank">
+            Resume
+          </a>
+        </button>
+      </div>
+    </div>
+  </main>
+</Layout>

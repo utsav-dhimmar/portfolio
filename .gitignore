@@ -15,7 +15,7 @@
 
 # production
 /build
-
+/dist
 # misc
 .DS_Store
 *.pem
@@ -43,3 +43,6 @@ next-env.d.ts
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# astro
+.astro

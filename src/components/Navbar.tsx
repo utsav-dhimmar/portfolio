@@ -1,5 +1,4 @@
 import { LINKS } from "@/constants";
-import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -8,13 +7,13 @@ export default function Navbar() {
         {LINKS.map(
           ({ title, isDisplayed, href }) =>
             isDisplayed && (
-              <Link
+              <a
                 href={href}
                 key={title}
                 className="overflow-hidden text-nowrap text-ellipsis transition-colors hover:text-white"
               >
                 {title}
-              </Link>
+              </a>
             ),
         )}
       </nav>
