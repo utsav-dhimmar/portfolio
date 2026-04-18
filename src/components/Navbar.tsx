@@ -7,11 +7,7 @@ export default function Navbar() {
         {LINKS.map(
           ({ title, isDisplayed, href }) =>
             isDisplayed && (
-              <a
-                href={href}
-                key={title}
-                className="overflow-hidden text-nowrap text-ellipsis transition-colors hover:text-white"
-              >
+              <a href={href} key={title} className="nav_link">
                 {title}
               </a>
             ),

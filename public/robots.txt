@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# AI Crawlers
+User-agent: GPTBot
+Disallow: /private/
+
+User-agent: Claude-Web
+Disallow: /private/
+
+User-agent: Google-Extended
+Disallow: /private/
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Content Signals
+Content-Signal: ai-train=no, search=yes, ai-input=no
+

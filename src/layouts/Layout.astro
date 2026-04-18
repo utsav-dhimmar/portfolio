@@ -1,8 +1,8 @@
 ---
 import '@fontsource/spline-sans-mono';
 import '../styles/globals.css';
-import Navbar from '../components/Navbar';
 import { Font } from 'astro:assets';
+import Navbar from '../components/Navbar';
 
 interface Props {
 	title?: string;
@@ -26,6 +26,22 @@ const { title = "Utsav Dhimmar", description = "Utsav's portfolio" } = Astro.pro
         <meta name="twitter:title" content="Utsav Dhimmar" />
         <meta name="robots" content="index, follow" />
         <Font cssVariable="--font-spline-sans-mono" preload />
+        <script is:inline>
+          if ('modelContext' in navigator) {
+            navigator.modelContext.provideContext({
+              tools: [
+                {
+                  name: 'get_portfolio_info',
+                  description: 'Get information about Utsav Dhimmar',
+                  inputSchema: { type: 'object', properties: {} },
+                  execute: async () => ({
+                    info: "Utsav Dhimmar is a software engineer with focus on fullstack development and AI integration."
+                  })
+                }
+              ]
+            }).catch(console.error);
+          }
+        </script>
 	</head>
 	<body class="font-mono">
         <Navbar />
